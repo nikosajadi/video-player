@@ -1,5 +1,6 @@
 :root {
-  --primary-color: dodgerblue;
+  /* this is allowing us to set one primary color for everything */
+  --primary-color: rgb(8, 83, 24);
   --font-color: white;
 }
 
@@ -22,9 +23,11 @@ body {
   color: var(--font-color);
   font-size: 35px;
 }
-
+/* parent container */
 .player {
+  /* our player has a max width 80 viewport= 80 percent of screen */
   max-width: 80vw;
+  /* we have Minwhith of eight hundred pixels */
   min-width: 800px;
   border: 5px solid black;
   border-radius: 10px;
@@ -35,6 +38,9 @@ body {
 
 video {
   border-radius: 5px;
+  /* that mean means 100% of the player width */
+  width: 100%;
+  height: auto;
 
 }
 
@@ -208,7 +214,11 @@ select > option {
 /* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 600px) {
 
+  .player {
+    min-width: 0;
+    max-width: 95vw;
 
+  }
   .fas {
     font-size: 20px;
   }
