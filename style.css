@@ -264,19 +264,18 @@ select > option {
 }
 
 /* Media Query: Large Smartphone (Horizontal) */
-@media screen and (max-width: 900px) and (max-height: 500px) {
-  .player {
-    max-height: 95vh;
-    max-width: auto;
+/* Media Query: iPhone (Vertical) */
+@media screen and (max-width: 376px) {
+  .player-container {
+    width: 95vw;
   }
 
-  video {
-    height: 95vh;
-    object-fit: cover;
+  .img-container {
+    left: 29px;
   }
-
-  .video-fullscreen {
-    height: 97.5vh;
-    border-radius: 0;
+  
+ .player-controls {
+    top: -10px;
+    left: 100px;
   }
 }

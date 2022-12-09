@@ -16,15 +16,26 @@
     <!-- Ocean (720P)-->
     <!-- https://pixabay.com/videos/download/video-31377_tiny.mp4?attachment -->
     <!-- https://pixabay.com/videos/download/video-113403_medium.mp4?attachment -->
+  
 <!-- Script -->
 <!-- playsinline is an attribute what is this is to do is on mobile devices when you click play by defult,it will go to full screen view.  -->
 <div class="player">
-    <video src="https://pixabay.com/videos/download/video-113403_medium.mp4?attachment" class="video" playsinline></video>
+    <video src="https://pixabay.com/videos/download/video-74888_tiny.mp4?attachment" class="video" playsinline></video>
     <!-- we want to creat container for Show controls -->
     <div class="show-controls">
+        <div class="show-controls">
         <!-- controls-container -->
-        <dic class="controls-container">
+        <dic class="controls-container"> 
            <!-- controls ProgressBar -->
+           <div class="progress-range" title="Seek">
+               <div class="progress-bar"></div>
+           </div>
+           <div class="control-group">
+            <!-- controls-Left -->
+            <div class="controls-left"></div>
+            <!-- Right controls -->
+            <div class="controls-right"></div>
+           </div>
            <!-- progress-range is the parent of continer and it has the background color and full length-->
            <!-- Title of seek so that when someone hovers over the progress bar it'll explain that they are able to jump around in the video inside of div -->
            <div class="controls-range" title="seek">
