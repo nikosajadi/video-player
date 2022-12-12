@@ -22,49 +22,60 @@
 <div class="player">
     <video src="https://pixabay.com/videos/download/video-74888_tiny.mp4?attachment" class="video" playsinline></video>
     <!-- we want to creat container for Show controls -->
-    <div class="show-controls">
+    <!-- show-controls -->
         <div class="show-controls">
         <!-- controls-container -->
-        <dic class="controls-container"> 
+        <div class="controls-container"> 
            <!-- controls ProgressBar -->
+        <!-- seek: are able to jump around in the video inside of this div -->
            <div class="progress-range" title="Seek">
+         <!-- progress-bar: show us how far throught the video I are. -->
                <div class="progress-bar"></div>
            </div>
            <div class="control-group">
             <!-- controls-Left -->
             <div class="controls-left">
-                <!-- play/Puse -->
+                <!-- play/Puse (font awesome solid)-->
                 <div class="play-controls">
                     <i class="fas fa-play" title="play" id="paly-btn"></i>
                 </div>
                 <!-- volume -->
                 <div class="volume">
                     <div class="volume-icon">
-                        <i class="fas fa-volume-up" title="mute" id="volumne-icon"></i>
+                <!-- fas:font awesome solid -->
+                        <i class="fas fa-volume-up" title="Mute" id="volume-icon"></i>
                     </div>
-                </div>
-                <div class="volume-range" title="change Volume">
+                <div class="volume-range" title="Change Volume">
+            <!-- volume bar represent a percentage of how much volume is ther -->
                     <div class="volume-bar"></div>
                 </div>
-                </div>
             </div>
+        </div>
             <!--  controls-Right -->
             <div class="controls-right">
                 <!-- speed -->
-                <div class="speed" title="Playback Rate"><slect name="playbackRate" class="player-speed">
+                <div class="speed" title="Playback Rate">
+                    <select name="playbackRate" class="player-speed">
                     <option value="0.5">0.5 x </option>
                     <option value="0.75">0.75 x </option>
+                //one time to be selected first because thats the video is going to play at.
                     <option value="1" selected>1 x </option>
                     <option value="1.5">1.5 x </option>
                     <option value="2">2 x </option>
-                </slect>
+                </select>
             </div>
             <!--Time -->
             <div class="time">
-                <span class="time-elapsed"></span>
+                <span class="time-elapsed">00:00 / </span>
+                <span class="time-duration">2:38</span>
             </div>
+            <!-- Fullscreen -->
+            <div class="fullscreen">
+              <i class="fab fa-expand"></i>
             </div>
-           </div>
+        </div>
+     </div>
+</div>
            <!-- progress-range is the parent of continer and it has the background color and full length-->
            <!-- Title of seek so that when someone hovers over the progress bar it'll explain that they are able to jump around in the video inside of div -->
            <div class="controls-range" title="seek">
