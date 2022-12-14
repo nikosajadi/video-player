@@ -48,7 +48,7 @@ video {
 .show-controls {
   width: 100%;
   height: 25%;
-  background: rgb(119, 195, 209);
+  /* background: rgb(119, 195, 209); */
   z-index: 2;
   position: absolute;
   bottom: 0;
@@ -76,7 +76,7 @@ video {
 /* when our show controls is being hovered over,I will modify the controls */
 .show-controls:hover .controls-container {
   opacity: 1;
-  /* show more quicly like 0.2s */
+  /* appear quicly like 0.2s and diappear unquicly */
   transition: all 0.2s ease-out 2s;
 }
 
@@ -99,7 +99,10 @@ video {
 
 /* Progress Bar */
 .progress-range {
-
+  height: 8px;
+  /* calc functions that lets you perform calculations */
+  width: calc(100% - 30px);
+  background: rgba(182, 178, 178, 0.5);
   margin: auto;
   border-radius: 10px;
   position: absolute;
