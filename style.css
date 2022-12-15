@@ -188,10 +188,15 @@ video {
   margin-right: 15px;
 }
 
+select,
+option {
+  cursor: pointer;
+}
 
 
 select {
-
+/* it is should be invisible */
+  background: transparent;
   color: var(--font-color);
   border: none;
   font-size: 18px;
@@ -199,8 +204,10 @@ select {
   top: -2.5px;
   border-radius: 5px;
 }
-
-
+/* it is going to removw outline that we just see after we clicked outside of our select element */
+select:focus {
+  outline: none;
+}
 
 select > option {
   background: rgba(0, 0, 0, 0.9);
