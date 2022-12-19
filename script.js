@@ -1,5 +1,4 @@
 
-const player = document.querySelector('.player');
 const video = document.querySelector('.video');
 const progressRange = document.querySelector('.progress-range');
 const progressBar = document.querySelector('.progress-bar');
@@ -12,7 +11,13 @@ const currentTime = document.querySelector('.time-elapsed');
 const duration = document.querySelector('.time-duration');
 const fullscreenBtn = document.querySelector('.fullscreen');
 
-// play & pause 
+//play & pause 
+   // switch back to play mode when in the pause
+function showaPlay() {
+  playBtn.classList.replace('fa-pause', 'fa-play');
+  playBtn.setAttribute('title', 'play');
+}
+
 function togglePlay() {
     if (video.paused) {
       video.play();
@@ -21,11 +26,17 @@ function togglePlay() {
     playBtn.setAttribute('title', 'pause');
     } else {
         video.pause();
-    playBtn.classList.replace('fa-pause', 'fa-play');
-    playBtn.setAttribute('title', 'pause');
+        showPlayIcon();
+
     }
 }
 
+
+
+
+
+//on Video End, show play button icon.
+video.addEventListener('ended', showPlayIcon);
 
 
 // Event Listeners
