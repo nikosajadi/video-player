@@ -20,7 +20,7 @@
 <!-- Script -->
 <!-- playsinline is an attribute what is this is to do is on mobile devices when you click play by defult,it will go to full screen view.  -->
 <div class="player">
-    <video src="https://pixabay.com/videos/download/video-31377_tiny.mp4?attachment" class="video" playsinline></video>
+    <video src="https://pixabay.com/videos/download/video-20072_medium.mp4?attachment" class="video" playsinline></video>
     <!-- we want to creat container for Show controls -->
     <!-- show-controls -->
     <div class="show-controls">
@@ -32,14 +32,14 @@
                <!-- progress-bar: show us how far throught the video I are. -->
                <!-- progress-range is the parent of continer and it has the background color and full length-->
                <!-- Title of seek so that when someone hovers over the progress bar it'll explain that they are able to jump around in the video inside of div -->
-               <div class="rogress-bar"></div>
+               <div class="progress-bar"></div>
            </div>
            <div class="control-group">
                <!-- Left Controls -->
                <div class="controls-left">
                     <!--play/puse  -->
                     <div class="play-controls">
-                        <i class="fas fa-play" title="play" id="play-btn"></i>
+                        <i class="fas fa-play" title="Play" id="play-btn"></i>
                     </div>
                     <!-- volume -->
                     <div class="volume">
@@ -47,7 +47,7 @@
                             <!-- fas:font awesome solid -->
                             <i class="fas fa-volume-up" title="Mute" id="volume-icon"></i>
                         </div>
-                        <div class="volume-range" title="change Volume">
+                        <div class="volume-range" title="Change Volume">
                             <!-- volume bar represent a percentage of how much volume is there -->
                            <div class="volume-bar"></div> 
                         </div>
@@ -57,7 +57,7 @@
                <div class="controls-right">
                     <!-- speed -->
                     <div class="speed" title="Playback Rate">
-                        <select name="playbackRate" class="Play-speed">
+                        <select name="playbackRate" class="play-speed">
                             
                             <option value="0.5">0.5 x</option>
                             <option value="0.75">0.75 x</option>
@@ -70,7 +70,7 @@
                     <!-- Time -->
                     <div class="time">
                         <span class="time-elapsed"> 00:00 / </span>
-                        <span class="time-elapsed"> 02:38 </span>
+                        <span class="time-duration"> 02:38 </span>
                     </div>
                     <!-- Fullscreen -->
                     <div class="fullscreen">

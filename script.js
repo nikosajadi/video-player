@@ -13,31 +13,28 @@ const fullscreenBtn = document.querySelector('.fullscreen');
 
 //play & pause 
    // switch back to play mode when in the pause
-function showaPlay() {
+function showaPlayIcon () {
   playBtn.classList.replace('fa-pause', 'fa-play');
-  playBtn.setAttribute('title', 'play');
+  playBtn.setAttribute('title', 'Play');
 }
 
 function togglePlay() {
     if (video.paused) {
-      video.play();
-    // we going to change our playbtn when we click on it
-    playBtn.classList.replace('fa-play', 'fa-pause');
-    playBtn.setAttribute('title', 'pause');
+       video.play();
+       // we going to change our playbtn when we click on it
+       playBtn.classList.replace('fa-play', 'fa-pause');
+       playBtn.setAttribute('title', 'Pause');
     } else {
         video.pause();
-        showPlayIcon();
+        showaPlayIcon();
 
     }
 }
 
 
 
-
-
-//on Video End, show play button icon.
-video.addEventListener('ended', showPlayIcon);
-
+// On video end, show play button icon
+video.addEventListener('ended', showaPlayIcon);
 
 // Event Listeners
 playBtn.addEventListener('click', togglePlay);
