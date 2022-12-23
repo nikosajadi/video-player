@@ -31,11 +31,21 @@ function togglePlay() {
     }
 }
 
-
-
 // On video end, show play button icon
 video.addEventListener('ended', showaPlayIcon);
+
+//Update progress bar as video plays
+function updateProgress () {
+  console.log('currentTime', video.currentTime,'duration', video.duration );
+}
+
+
+
 
 // Event Listeners
 playBtn.addEventListener('click', togglePlay);
 video.addEventListener('click', togglePlay);
+// timeupdate is an event when the current playback position has changed
+video.addEventListener('timeupdate', updateProgress);
+// canplay is an event when fires the browser can start playing the audio/video
+video.addEventListener('canplay', updateProgress);
