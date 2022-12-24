@@ -37,6 +37,8 @@ video.addEventListener('ended', showaPlayIcon);
 //Update progress bar as video plays
 function updateProgress () {
   console.log('currentTime', video.currentTime,'duration', video.duration );
+  // I going to change the inline style of our progress for our element with the progress
+  progressBar.style.width = `${(video.currentTime / video.duration * 100)} %`;
 }
 
 
